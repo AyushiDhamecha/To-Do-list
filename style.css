@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(132deg, #153677, #4e085f);
+    padding: 100px;
+}
+
+.to-do_cotainer {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.to-do_cotainer h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.to-do_cotainer img {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #edeef0;
+    border-radius: 30px;
+}
+
+.row input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.row button {
+    width: 80px;
+    font-size: 17px;
+    background-color: orangered;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+.row button:hover {
+    background-color: orange;
+    color: black;
+}
+
+ul li {
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    font-size: 19px;
+    list-style: none;
+    margin: 20px;
+    position: relative;
+    border-radius: 10px;
+}
+
+ul li::before {
+    content: ' ';
+    position: absolute;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    background-color: rgba(150, 208, 62, 0.467);
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    color: black;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 30px;
+    top: 5px;
+    text-align: center;
+    line-height: 40px;
+}
+
+ul li span:hover {
+    background-color: rgb(167, 170, 165);
+}
+
+ul li p {
+    color: black;
+    width: auto;
+}
+
+@media screen and (max-width: 800px) {
+
+    .to-do_cotainer,
+    .row,
+    #list_container {
+        width: 100%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+}
